@@ -55,8 +55,10 @@ namespace InfoScreenAdminBusiness
             try
             {
                 DbAccess.UpdateAdmin(admin);
-                var item = Model.Admins.Where(a => a.Id == admin.Id).FirstOrDefault();
-                item = admin;
+                var ad = Model.Admins.Where(a => a.Id == admin.Id).FirstOrDefault();
+                ad.PasswordHash = admin.PasswordHash;
+                ad.PasswordSalt = admin.PasswordSalt;
+                ad.Username = admin.Username;
                 return true;
             }
             catch (Exception e)

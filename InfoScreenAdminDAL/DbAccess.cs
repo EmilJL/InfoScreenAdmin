@@ -199,6 +199,29 @@ namespace InfoScreenAdminDAL
                 Debug.WriteLine("Exception: " + eSql.Message);
             }
         }
+        public void UpdateLunchPlan(LunchPlan lunchPlan)
+        {
+            string Id = lunchPlan.Id.ToString();
+            string date = lunchPlan.Date.ToLongDateString();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("UPDATE LunchPlans SET Date = @Date, Meal = @Meal WHERE Id = @Id", conn))
+                    {
+                        command.Parameters.AddWithValue("@Id", Id);
+                        command.Parameters.AddWithValue("@Date", date);
+                        command.Parameters.AddWithValue("@Meal", lunchPlan.Meal);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+        }
         public void AddMessage(Message message)
         {
             string AddMessageQuery = $"INSERT into Messages (AdminId, Date, Text, Header) VALUES (@AdminId, @Date, @Text, @Header)";
@@ -237,6 +260,32 @@ namespace InfoScreenAdminDAL
                     using (SqlCommand command = new SqlCommand("DELETE FROM Messages WHERE Id = @id", conn))
                     {
                         command.Parameters.AddWithValue("@Id", Id);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+        }
+        public void UpdateMessage(Message message)
+        {
+            string Id = message.Id.ToString();
+            string adminId = message.AdminId.ToString();
+            string date = message.Date.ToLongDateString();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("UPDATE Messages SET AdminId = @AdminId, Date = @Date, Text = @Text, Header = @Header WHERE Id = @Id", conn))
+                    {
+                        command.Parameters.AddWithValue("@Id", Id);
+                        command.Parameters.AddWithValue("@AdminId", adminId);
+                        command.Parameters.AddWithValue("@Date", date);
+                        command.Parameters.AddWithValue("@Text", message.Text);
+                        command.Parameters.AddWithValue("@Header", message.Header);
                         command.ExecuteNonQuery();
                     }
                 }

@@ -51,5 +51,23 @@ namespace InfoScreenAdminBusiness
                 return false;
             }
         }
+        public bool UpdateMessage(Message message)
+        {
+            try
+            {
+                DbAccess.UpdateMessage(message);
+                var mes = Model.Messages.Where(m => m.Id == message.Id).FirstOrDefault();
+                mes.AdminId = message.AdminId;
+                mes.Date = message.Date;
+                mes.Header = message.Header;
+                mes.Text = message.Text;
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
 }

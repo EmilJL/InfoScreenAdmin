@@ -29,12 +29,28 @@ namespace InfoScreenAdminBusiness
                 return false;
             }
         }
-        public bool DeleteMessage(int id)
+        public bool DeleteLunchPlan(int id)
         {
             try
             {
-                DbAccess.DeleteMessage(id);
-                Model.LunchPlans.RemoveAt(Model.LunchPlans.IndexOf(Model.LunchPlans.Where(m => m.Id == id).FirstOrDefault()));
+                DbAccess.DeleteLunchPlan(id);
+                Model.LunchPlans.RemoveAt(Model.LunchPlans.IndexOf(Model.LunchPlans.Where(l => l.Id == id).FirstOrDefault()));
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return false;
+            }
+        }
+        public bool UpdateLunchPlan(LunchPlan lunchPlan)
+        {
+            try
+            {
+                DbAccess.UpdateLunchPlan(lunchPlan);
+                var lp = Model.LunchPlans.Where(l => l.Id == lunchPlan.Id).FirstOrDefault();
+                lp.Date = lunchPlan.Date;
+                lp.Meal = lunchPlan.Meal;
                 return true;
             }
             catch (Exception e)
