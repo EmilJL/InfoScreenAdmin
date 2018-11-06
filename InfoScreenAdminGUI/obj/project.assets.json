@@ -7010,11 +7010,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emil5923\\source\\repos\\InfoScreenAdminGUI\\InfoScreenAdminGUI\\InfoScreenAdminGUI.csproj",
+      "projectUniqueName": "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminGUI\\InfoScreenAdminGUI.csproj",
       "projectName": "InfoScreenAdminGUI",
-      "projectPath": "C:\\Users\\emil5923\\source\\repos\\InfoScreenAdminGUI\\InfoScreenAdminGUI\\InfoScreenAdminGUI.csproj",
+      "projectPath": "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminGUI\\InfoScreenAdminGUI.csproj",
       "packagesPath": "C:\\Users\\emil5923\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emil5923\\source\\repos\\InfoScreenAdminGUI\\InfoScreenAdminGUI\\obj\\",
+      "outputPath": "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminGUI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
