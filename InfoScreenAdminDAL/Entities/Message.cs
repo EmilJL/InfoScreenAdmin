@@ -14,6 +14,10 @@ namespace InfoScreenAdminDAL.Entities
         private string text;
         private string header;
 
+        public Message()
+        {
+
+        }
         public Message(int adminId, DateTime date, string header, string text)
         {
             AdminId = adminId;

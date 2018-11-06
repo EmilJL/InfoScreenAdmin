@@ -116,9 +116,35 @@ namespace InfoScreenAdminDAL
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using (SqlCommand command = new SqlCommand("DELETE FROM Admins WHERE Id = @id", conn))
+                    using (SqlCommand command = new SqlCommand("DELETE FROM Admins WHERE Id = @Id", conn))
                     {
                         command.Parameters.AddWithValue("@Id", Id);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+        }
+        
+        public void UpdateAdmin(Admin admin)
+        {
+            string Id = admin.Id.ToString();
+            string passwordHash = Convert.ToBase64String(admin.PasswordHash);
+            string passwordSalt = Convert.ToBase64String(admin.PasswordSalt);
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("UPDATE Admins SET Username = @username, PasswordSalt = @PasswordSalt, PasswordHash = @PasswordHash WHERE Id = @Id", conn))
+                    {
+                        command.Parameters.AddWithValue("@Id", Id);
+                        command.Parameters.AddWithValue("@PasswordHash", passwordHash);
+                        command.Parameters.AddWithValue("@PasswordSalt", passwordSalt);
+                        command.Parameters.AddWithValue("@Username", admin.Username);
                         command.ExecuteNonQuery();
                     }
                 }
@@ -161,7 +187,7 @@ namespace InfoScreenAdminDAL
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using (SqlCommand command = new SqlCommand("DELETE FROM LunchPlans WHERE Id = @id", conn))
+                    using (SqlCommand command = new SqlCommand("DELETE FROM LunchPlans WHERE Id = @Id", conn))
                     {
                         command.Parameters.AddWithValue("@Id", Id);
                         command.ExecuteNonQuery();

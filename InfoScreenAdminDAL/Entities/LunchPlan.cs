@@ -12,6 +12,10 @@ namespace InfoScreenAdminDAL.Entities
         private DateTime date;
         private string meal;
 
+        public LunchPlan()
+        {
+
+        }
         public LunchPlan(DateTime date, string meal)
         {
             Date = date;

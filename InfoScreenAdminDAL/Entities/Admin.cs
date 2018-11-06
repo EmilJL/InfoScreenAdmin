@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,13 +14,16 @@ namespace InfoScreenAdminDAL.Entities
         private byte[] passwordSalt;
         private byte[] passwordHash;
 
+        public Admin()
+        {
+
+        }
         public Admin(string username, byte[] passwordSalt, byte[] passwordHash)
         {
             Username = username;
-            PasswordHash = passwordHash;
             PasswordSalt = passwordSalt;
+            PasswordHash = passwordHash;
         }
-
         public string Username
         {
             get { return username; }
@@ -28,7 +32,6 @@ namespace InfoScreenAdminDAL.Entities
                 username = value;
             }
         }
-
         public byte[] PasswordSalt
         {
             get { return passwordSalt; }
@@ -37,8 +40,6 @@ namespace InfoScreenAdminDAL.Entities
                 passwordSalt = value;
             }
         }
-
-
         public byte[] PasswordHash
         {
             get { return passwordHash; }
@@ -47,5 +48,7 @@ namespace InfoScreenAdminDAL.Entities
                 passwordHash = value;
             }
         }
+
+        
     }
 }
