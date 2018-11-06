@@ -49,8 +49,7 @@ namespace InfoScreenAdminBusiness
             {
                 DbAccess.UpdateLunchPlan(lunchPlan);
                 var lp = Model.LunchPlans.Where(l => l.Id == lunchPlan.Id).FirstOrDefault();
-                lp.Date = lunchPlan.Date;
-                lp.Meal = lunchPlan.Meal;
+                lp.Week = lunchPlan.Week;
                 return true;
             }
             catch (Exception e)

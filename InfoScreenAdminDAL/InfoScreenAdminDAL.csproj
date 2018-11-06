@@ -109,6 +109,7 @@
     <Compile Include="DbAccess.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\LunchPlan.cs" />
+    <Compile Include="Entities\Meal.cs" />
     <Compile Include="Entities\Message.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

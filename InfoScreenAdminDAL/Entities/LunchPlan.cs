@@ -9,34 +9,26 @@ namespace InfoScreenAdminDAL.Entities
     public class LunchPlan
     {
         public int Id { get; set; }
-        private DateTime date;
-        private string meal;
-
+        private int week;
+        private List<Meal> meals;
         public LunchPlan()
         {
 
         }
-        public LunchPlan(DateTime date, string meal)
+        public LunchPlan(int week, List<Meal> meals)
         {
-            Date = date;
-            Meal = meal;
+            Week = week;
+            Meals = meals;
         }
-
-        public string Meal
+        public int Week
         {
-            get { return meal; }
-            set
-            {
-                meal = value;
-            }
+            get { return week; }
+            set { week = value; }
         }
-        public DateTime Date
+        public List<Meal> Meals
         {
-            get { return date; }
-            set
-            {
-                date = value;
-            }
+            get { return meals; }
+            set { meals = value; }
         }
     }
 }

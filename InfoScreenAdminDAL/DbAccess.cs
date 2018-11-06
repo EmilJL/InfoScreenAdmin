@@ -19,9 +19,12 @@ namespace InfoScreenAdminDAL
             const string GetAdminsQuery = "SELECT * from Admins";
             const string GetLunchPlansQuery = "SELECT * from LunchPlans";
             const string GetMessagesQuery = "SELECT * from Messages";
+            const string GetMealsQuery = "SELECT * from Meals";
             var admins = new ObservableCollection<Admin>();
             var lunchPlans = new ObservableCollection<LunchPlan>();
             var messages = new ObservableCollection<Message>();
+            var meals = new ObservableCollection<Meal>();
+            
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -44,18 +47,6 @@ namespace InfoScreenAdminDAL
                                     admins.Add(admin);
                                 }
                             }
-                            cmd.CommandText = GetLunchPlansQuery;
-                            using (SqlDataReader reader = cmd.ExecuteReader())
-                            {
-                                while (reader.Read())
-                                {
-                                    var lunchPlan = new LunchPlan();
-                                    lunchPlan.Id = reader.GetInt32(0);
-                                    lunchPlan.Date = reader.GetDateTime(1);
-                                    lunchPlan.Meal = reader.GetString(2);
-                                    lunchPlans.Add(lunchPlan);
-                                }
-                            }
                             cmd.CommandText = GetMessagesQuery;
                             using (SqlDataReader reader = cmd.ExecuteReader())
                             {
@@ -70,6 +61,30 @@ namespace InfoScreenAdminDAL
                                     messages.Add(message);
                                 }
                             }
+                            cmd.CommandText = GetMealsQuery;
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    var meal = new Meal();
+                                    meal.Id = reader.GetInt32(0);
+                                    meal.LunchPlanId = reader.GetInt32(1);
+                                    meal.TimesChosen = reader.GetInt32(2);
+                                    meals.Add(meal);
+                                }
+                            }
+                            cmd.CommandText = GetLunchPlansQuery;
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    var lunchPlan = new LunchPlan();
+                                    lunchPlan.Id = reader.GetInt32(0);
+                                    lunchPlan.Meals = meals.Where(m => m.LunchPlanId == lunchPlan.Id).ToList();
+                                    lunchPlan.Week = reader.GetInt32(1);
+                                    lunchPlans.Add(lunchPlan);
+                                }
+                            }
                         }
                     }
                 }
@@ -78,7 +93,7 @@ namespace InfoScreenAdminDAL
             {
                 Debug.WriteLine("Exception: " + eSql.Message);
             }
-            Model model = new Model(admins, lunchPlans, messages);
+            Model model = new Model(admins, lunchPlans, messages, meals);
             return model;
         }
         public void AddAdmin(Admin admin)
@@ -156,7 +171,7 @@ namespace InfoScreenAdminDAL
         }
         public void AddLunchPlan(LunchPlan lunchPlan)
         {
-            string AddLunchPlanQuery = $"INSERT into LunchPlans (Date, Meal) VALUES (@Date, @Meal)";
+            string AddLunchPlanQuery = $"INSERT into LunchPlans (Week) VALUES (@Week)";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -167,8 +182,7 @@ namespace InfoScreenAdminDAL
                         using (SqlCommand cmd = conn.CreateCommand())
                         {
                             cmd.CommandText = AddLunchPlanQuery;
-                            cmd.Parameters.AddWithValue("@Date", lunchPlan.Date);
-                            cmd.Parameters.AddWithValue("@Meal", lunchPlan.Meal);
+                            cmd.Parameters.AddWithValue("@Week", lunchPlan.Week);
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -202,17 +216,16 @@ namespace InfoScreenAdminDAL
         public void UpdateLunchPlan(LunchPlan lunchPlan)
         {
             string Id = lunchPlan.Id.ToString();
-            string date = lunchPlan.Date.ToLongDateString();
+            string week = lunchPlan.Week.ToString();
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using (SqlCommand command = new SqlCommand("UPDATE LunchPlans SET Date = @Date, Meal = @Meal WHERE Id = @Id", conn))
+                    using (SqlCommand command = new SqlCommand("UPDATE LunchPlans SET Week = @Week WHERE Id = @Id", conn))
                     {
                         command.Parameters.AddWithValue("@Id", Id);
-                        command.Parameters.AddWithValue("@Date", date);
-                        command.Parameters.AddWithValue("@Meal", lunchPlan.Meal);
+                        command.Parameters.AddWithValue("@Week", week);
                         command.ExecuteNonQuery();
                     }
                 }
@@ -286,6 +299,79 @@ namespace InfoScreenAdminDAL
                         command.Parameters.AddWithValue("@Date", date);
                         command.Parameters.AddWithValue("@Text", message.Text);
                         command.Parameters.AddWithValue("@Header", message.Header);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+        }
+        public void AddMeal(Meal meal)
+        {
+            string AddMealQuery = $"INSERT into Meals (Description, LunchPlanId, TimesChosen) VALUES (@Description, @LunchPlanId, @TimesChosen)";
+            string LunchPlanId = meal.LunchPlanId.ToString();
+            string TimesChosen = meal.TimesChosen.ToString();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqlCommand cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = AddMealQuery;
+                            cmd.Parameters.AddWithValue("@Description", meal.Description);
+                            cmd.Parameters.AddWithValue("@LunchPlanId", LunchPlanId);
+                            cmd.Parameters.AddWithValue("@TimesChosen", TimesChosen);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+        }
+        public void DeleteMeal(int mealId)
+        {
+            string Id = mealId.ToString();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("DELETE FROM Meals WHERE Id = @Id", conn))
+                    {
+                        command.Parameters.AddWithValue("@Id", Id);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+        }
+        public void UpdateMeal(Meal meal)
+        {
+            string Id = meal.Id.ToString();
+            string lunchPlanId = meal.LunchPlanId.ToString();
+            string timesChosen = meal.TimesChosen.ToString();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("UPDATE Meals SET Description = @description, LunchPlanId = @lunchPlanId, TimesChosen = @timesChosen WHERE Id = @Id", conn))
+                    {
+                        command.Parameters.AddWithValue("@Id", Id);
+                        command.Parameters.AddWithValue("@description", meal.Description);
+                        command.Parameters.AddWithValue("@lunchPlanId", lunchPlanId);
+                        command.Parameters.AddWithValue("@timesChosen", timesChosen);
                         command.ExecuteNonQuery();
                     }
                 }
