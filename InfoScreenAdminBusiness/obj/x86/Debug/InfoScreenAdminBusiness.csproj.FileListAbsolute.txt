@@ -20,3 +20,7 @@ C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminBusiness\obj\x86\Debug\
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminBusiness\obj\x86\Debug\qualifiers.txt
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminBusiness\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminBusiness\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\InfoScreenAdmin\InfoScreenAdminBusiness\obj\x86\Debug\InfoScreenAdminBusiness.csprojAssemblyReference.cache
+C:\InfoScreenAdmin\InfoScreenAdminBusiness\obj\x86\Debug\InfoScreenAdminBusiness.csproj.CoreCompileInputs.cache
+C:\InfoScreenAdmin\InfoScreenAdminBusiness\obj\x86\Debug\InfoScreenAdminBusiness.dll
+C:\InfoScreenAdmin\InfoScreenAdminBusiness\obj\x86\Debug\InfoScreenAdminBusiness.pdb

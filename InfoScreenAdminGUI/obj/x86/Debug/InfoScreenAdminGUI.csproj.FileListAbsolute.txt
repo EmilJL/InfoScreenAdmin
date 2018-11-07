@@ -286,3 +286,14 @@ C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\quali
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\ProjectArchitectures.txt
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\App.g.i.cs
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\App.g.cs
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\MainPage.g.i.cs
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\MainPage.g.cs
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\App.xaml
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\MainPage.xaml
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\App.xbf
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\MainPage.xbf
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\XamlSaveStateFile.xml
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\InfoScreenAdminGUI.exe
+C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\InfoScreenAdminGUI.pdb
