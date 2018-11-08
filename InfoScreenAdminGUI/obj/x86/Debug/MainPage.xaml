@@ -12,25 +12,25 @@
         <Pivot Title="Pivot" HorizontalAlignment="Stretch" Margin="540,0,0,0" VerticalAlignment="Stretch">
             <PivotItem Header="Madplan">
                 <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-                    <Button x:ConnectionId='11' x:Name="BtnCurrentFoodPlan" Content="Nuværende plan" HorizontalAlignment="Left" Margin="48,222,0,0" VerticalAlignment="Top"/>
+                    <Button x:ConnectionId='11' x:Name="BtnCurrentFoodPlan" Content="Nuværende plan" HorizontalAlignment="Left" Margin="48,231,0,0" VerticalAlignment="Top"/>
 
                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="261" Margin="48,295,0,0" VerticalAlignment="Top" Width="574">
                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
 
-                            <TextBox x:ConnectionId='21' x:Name="TBoxMonday" HorizontalAlignment="Left" Margin="287,0,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='22' x:Name="TBlockMonday" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Mandag" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <TextBox x:ConnectionId='23' x:Name="TBoxMonday" HorizontalAlignment="Left" Margin="287,0,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <TextBlock x:ConnectionId='24' x:Name="TBlockMonday" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Mandag" VerticalAlignment="Top" Height="45" Width="287"/>
 
-                            <TextBox x:ConnectionId='23' x:Name="TBoxTuesday" HorizontalAlignment="Left" Margin="287,54,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='24' x:Name="TBlockTuesday" HorizontalAlignment="Left" Margin="0,54,0,0" Text="Tirsdag" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <TextBox x:ConnectionId='25' x:Name="TBoxTuesday" HorizontalAlignment="Left" Margin="287,54,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <TextBlock x:ConnectionId='26' x:Name="TBlockTuesday" HorizontalAlignment="Left" Margin="0,54,0,0" Text="Tirsdag" VerticalAlignment="Top" Height="45" Width="287"/>
 
-                            <TextBox x:ConnectionId='25' x:Name="TBoxWednesday" HorizontalAlignment="Left" Margin="287,108,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='26' x:Name="TBlockWednesday" HorizontalAlignment="Left" Margin="0,108,0,0" Text="Onsdag" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <TextBox x:ConnectionId='27' x:Name="TBoxWednesday" HorizontalAlignment="Left" Margin="287,108,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <TextBlock x:ConnectionId='28' x:Name="TBlockWednesday" HorizontalAlignment="Left" Margin="0,108,0,0" Text="Onsdag" VerticalAlignment="Top" Height="45" Width="287"/>
 
-                            <TextBox x:ConnectionId='27' x:Name="TBoxThursday" HorizontalAlignment="Left" Margin="287,162,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='28' x:Name="TBlockThursday" HorizontalAlignment="Left" Margin="0,162,0,0" Text="Torsdag" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <TextBox x:ConnectionId='29' x:Name="TBoxThursday" HorizontalAlignment="Left" Margin="287,162,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <TextBlock x:ConnectionId='30' x:Name="TBlockThursday" HorizontalAlignment="Left" Margin="0,162,0,0" Text="Torsdag" VerticalAlignment="Top" Height="45" Width="287"/>
 
-                            <TextBox x:ConnectionId='29' x:Name="TBoxFriday" HorizontalAlignment="Left" Margin="287,216,0,0" Text="Ret her!" VerticalAlignment="Center" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='30' x:Name="TBlockFriday" HorizontalAlignment="Left" Margin="0,216,0,0" Text="Fredag" VerticalAlignment="Center" Height="45" Width="287"/>
+                            <TextBox x:ConnectionId='31' x:Name="TBoxFriday" HorizontalAlignment="Left" Margin="287,216,0,0" Text="Ret her!" VerticalAlignment="Center" Height="45" Width="287"/>
+                            <TextBlock x:ConnectionId='32' x:Name="TBlockFriday" HorizontalAlignment="Left" Margin="0,216,0,0" Text="Fredag" VerticalAlignment="Center" Height="45" Width="287"/>
                         </Grid>
                     </Border>
 
@@ -43,8 +43,10 @@
                     <Button x:ConnectionId='17' x:Name="BtnAddDishFriday" Content="Tilføj" Margin="663,516,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
                     <Button x:ConnectionId='18' x:Name="BtnSavePlan" Content="Gem" Margin="570,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <ComboBox x:ConnectionId='19' x:Name="CmbBoxWeekNumbers" HorizontalAlignment="Left" Margin="235,238,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:ConnectionId='20' x:Name="TBoxWeekNumber" HorizontalAlignment="Left" Margin="223,194,0,0" Text="Uge Nummer" VerticalAlignment="Top"/>
+                    <ComboBox x:ConnectionId='19' x:Name="CmbBoxWeekNumbers" HorizontalAlignment="Left" Margin="315,232,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:ConnectionId='20' x:Name="TBoxWeekNumber" HorizontalAlignment="Left" Margin="238,232,0,0" Text="Uge nr. :" VerticalAlignment="Top"/>
+                    <Button x:ConnectionId='21' x:Name="BtnAddDishToDB" Content="Tilføj ret til Databasen" HorizontalAlignment="Left" Margin="757,253,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:ConnectionId='22' x:Name="TBoxSearchField" HorizontalAlignment="Left" Margin="928,253,0,0" Text="Søg på retter" VerticalAlignment="Top"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Fællesbesked">
