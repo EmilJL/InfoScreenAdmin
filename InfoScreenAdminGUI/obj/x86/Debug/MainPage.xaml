@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="InfoScreenAdminGUI.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                               >
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -21,12 +21,12 @@
         </Grid.RowDefinitions>
         <Pivot Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="3" Title="Pivot" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <PivotItem Header="Madplan">
-                <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                <Grid x:ConnectionId='11' x:Name="PivotGrid1" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="1" Width="auto">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <!--<ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>-->
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -34,41 +34,99 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Button x:ConnectionId='11' x:Name="BtnCurrentFoodPlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" Content="Nuværende plan" HorizontalAlignment="Left" Margin="48,80,0,0" VerticalAlignment="Top"/>
 
-                    <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="261" Margin="48,125,0,0" VerticalAlignment="Top" Width="574">
-                        <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                    <Grid x:ConnectionId='12' x:Name="GridMealPlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" BorderBrush="Black" BorderThickness="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                            <TextBox x:ConnectionId='23' x:Name="TBoxMonday" HorizontalAlignment="Left" Margin="287,0,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='24' x:Name="TBlockMonday" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Mandag" VerticalAlignment="Top" Height="45" Width="287"/>
+                        <Grid Grid.Row="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
 
-                            <TextBox x:ConnectionId='25' x:Name="TBoxTuesday" HorizontalAlignment="Left" Margin="287,54,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='26' x:Name="TBlockTuesday" HorizontalAlignment="Left" Margin="0,54,0,0" Text="Tirsdag" VerticalAlignment="Top" Height="45" Width="287"/>
+                            <Button x:ConnectionId='32' x:Name="BtnCurrentFoodPlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" Content="Nuværende plan" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                            <ComboBox x:ConnectionId='33' x:Name="CmbBoxWeekNumbers" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='34' x:Name="TBlockWeekNumber"  Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0,0,0" Text="Uge nr. :" VerticalAlignment="Center"/>
 
-                            <TextBox x:ConnectionId='27' x:Name="TBoxWednesday" HorizontalAlignment="Left" Margin="287,108,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='28' x:Name="TBlockWednesday" HorizontalAlignment="Left" Margin="0,108,0,0" Text="Onsdag" VerticalAlignment="Top" Height="45" Width="287"/>
-
-                            <TextBox x:ConnectionId='29' x:Name="TBoxThursday" HorizontalAlignment="Left" Margin="287,162,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='30' x:Name="TBlockThursday" HorizontalAlignment="Left" Margin="0,162,0,0" Text="Torsdag" VerticalAlignment="Top" Height="45" Width="287"/>
-
-                            <TextBox x:ConnectionId='31' x:Name="TBoxFriday" HorizontalAlignment="Left" Margin="287,216,0,0" Text="Ret her!" VerticalAlignment="Center" Height="45" Width="287"/>
-                            <TextBlock x:ConnectionId='32' x:Name="TBlockFriday" HorizontalAlignment="Left" Margin="0,216,0,0" Text="Fredag" VerticalAlignment="Center" Height="45" Width="287"/>
                         </Grid>
-                    </Border>
 
-                    <ListView x:ConnectionId='12' x:Name="ListViewDatabaseDishes" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,125,0,0" Height="261" Width="504" BorderBrush="Black" BorderThickness="1">
-                    </ListView>
-                    <Button x:ConnectionId='13' x:Name="BtnAddDishMonday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" Content="Tilføj" Margin="20,130,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:ConnectionId='14' x:Name="BtnAddDishTuesdsay" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" Content="Tilføj" Margin="20,184,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:ConnectionId='15' x:Name="BtnAddDishWednesday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="2" Content="Tilføj" Margin="20,238,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:ConnectionId='16' x:Name="BtnAddDishThursday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="2" Content="Tilføj" Margin="20,292,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:ConnectionId='17' x:Name="BtnAddDishFriday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="2" Content="Tilføj" Margin="20,346,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-                    <Button x:ConnectionId='18' x:Name="BtnSavePlan" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Gem" Margin="230,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <ComboBox x:ConnectionId='19' x:Name="CmbBoxWeekNumbers" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,80,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:ConnectionId='20' x:Name="TBoxWeekNumber"  Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="238,80,0,0" Text="Uge nr. :" VerticalAlignment="Top"/>
-                    <Button x:ConnectionId='21' x:Name="BtnAddDishToDB" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" Content="Tilføj ret til Databasen" HorizontalAlignment="Left" Margin="96,80,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:ConnectionId='22' x:Name="TBoxSearchField" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="265,79.6,0,0" Text="Søg på retter" VerticalAlignment="Top" Width="335"/>
+
+                        <Grid Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" BorderBrush="Black" BorderThickness="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBox x:ConnectionId='17' x:Name="TBoxMonday" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="auto"/>
+                            <TextBlock x:ConnectionId='18' x:Name="TBlockMonday" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Mandag" VerticalAlignment="Top" Height="45" Width="auto"/>
+
+                            <TextBox x:ConnectionId='19' x:Name="TBoxTuesday" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="auto"/>
+                            <TextBlock x:ConnectionId='20' x:Name="TBlockTuesday" Grid.Row="1" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Tirsdag" VerticalAlignment="Top" Height="45" Width="auto"/>
+
+                            <TextBox x:ConnectionId='21' x:Name="TBoxWednesday" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="auto"/>
+                            <TextBlock x:ConnectionId='22' x:Name="TBlockWednesday" Grid.Row="2" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Onsdag" VerticalAlignment="Top" Height="45" Width="auto"/>
+
+                            <TextBox x:ConnectionId='23' x:Name="TBoxThursday" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Ret her!" VerticalAlignment="Top" Height="45" Width="auto"/>
+                            <TextBlock x:ConnectionId='24' x:Name="TBlockThursday" Grid.Row="3" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Torsdag" VerticalAlignment="Top" Height="45" Width="auto"/>
+
+                            <TextBox x:ConnectionId='25' x:Name="TBoxFriday" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Ret her!" VerticalAlignment="Center" Height="45" Width="auto"/>
+                            <TextBlock x:ConnectionId='26' x:Name="TBlockFriday" Grid.Row="4" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Fredag" VerticalAlignment="Center" Height="45" Width="auto"/>
+
+                            <Button x:ConnectionId='27' x:Name="BtnAddDishMonday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Button x:ConnectionId='28' x:Name="BtnAddDishTuesdsay" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Button x:ConnectionId='29' x:Name="BtnAddDishWednesday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Button x:ConnectionId='30' x:Name="BtnAddDishThursday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="3" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Button x:ConnectionId='31' x:Name="BtnAddDishFriday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="4" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Grid>
+
+                        <Button x:ConnectionId='16' x:Name="BtnSavePlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Gem" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        
+                    </Grid>
+
+                    <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button x:ConnectionId='14' x:Name="BtnAddDishToDB" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" Content="Tilføj ret til Databasen" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                            <TextBox x:ConnectionId='15' x:Name="TBoxSearchField" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0.6,0,0" Text="Søg på retter" VerticalAlignment="Center" Width="auto"/>
+                        </Grid>
+
+                        <ListView x:ConnectionId='13' x:Name="ListViewDatabaseDishes" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Height="auto" BorderBrush="Black" BorderThickness="1">
+                        </ListView>
+
+                    </Grid>
+
+                        
+                    
+
+                    
+
+                    
                 </Grid>
             </PivotItem>
             <PivotItem Header="Fællesbesked">
