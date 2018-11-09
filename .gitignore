@@ -1,6 +1,4 @@
-.vs/InfoScreenAdmin/v15/.sui
-.vs/InfoScreenAdmin/v15/Server/sqlite3/storage.ide-shm
-.vs/InfoScreenAdmin/v15/Server/sqlite3/storage.ide-wal
+/.vs/InfoScreenAdmin/v15
 /InfoScreenAdminGUI/obj/x86/Debug
 /InfoScreenAdminGUI/bin/x86/Debug
 /InfoScreenAdminDAL/obj/x86/Debug
