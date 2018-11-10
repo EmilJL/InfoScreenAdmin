@@ -68,8 +68,9 @@ namespace InfoScreenAdminDAL
                                 {
                                     var meal = new Meal();
                                     meal.Id = reader.GetInt32(0);
-                                    meal.LunchPlanId = reader.GetInt32(1);
-                                    meal.TimesChosen = reader.GetInt32(2);
+                                    meal.Description = reader.GetString(1);
+                                    meal.LunchPlanId = reader.GetInt32(2);
+                                    meal.TimesChosen = reader.GetInt32(3);
                                     meals.Add(meal);
                                 }
                             }

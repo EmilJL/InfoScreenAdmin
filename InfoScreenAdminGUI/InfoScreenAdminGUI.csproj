@@ -131,6 +131,16 @@
       <Version>6.1.5</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InfoScreenAdminBusiness\InfoScreenAdminBusiness.csproj">
+      <Project>{b6277525-94fb-4c19-895a-25d5c8eb506f}</Project>
+      <Name>InfoScreenAdminBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InfoScreenAdminDAL\InfoScreenAdminDAL.csproj">
+      <Project>{68e21734-90da-4495-88c5-f9cd1a7b00f0}</Project>
+      <Name>InfoScreenAdminDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

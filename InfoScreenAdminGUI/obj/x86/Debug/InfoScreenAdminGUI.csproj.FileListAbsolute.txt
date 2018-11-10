@@ -578,3 +578,12 @@ C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\qualifiers.txt
 C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\qualifiers.txt.intermediate
 C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminBusiness.dll
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminDAL.dll
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminBusiness.pdb
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminBusiness.pri
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminDAL.pdb
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminDAL.pri
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\obj\x86\Debug\Microsoft.AspNetCore.Cryptography.Internal\en-US\Microsoft.AspNetCore.Cryptography.Internal.Resources.resw

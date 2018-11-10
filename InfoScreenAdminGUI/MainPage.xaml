@@ -12,7 +12,7 @@
         <Pivot Title="Pivot" HorizontalAlignment="Stretch" Margin="540,0,0,0" VerticalAlignment="Stretch">
             <PivotItem Header="Madplan">
                 <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-                    <Button x:Name="BtnCurrentFoodPlan" Content="Nuværende plan" HorizontalAlignment="Left" Margin="48,222,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="BtnCurrentFoodPlan" Content="Nuværende plan" HorizontalAlignment="Left" Margin="48,222,0,0" VerticalAlignment="Top" Click="BtnCurrentFoodPlan_Click"/>
 
                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="261" Margin="48,295,0,0" VerticalAlignment="Top" Width="574">
                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
@@ -36,14 +36,14 @@
 
                     <ListView x:Name="ListViewDatabaseDishes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="754,295,0,0" Height="261" Width="504" BorderBrush="Black" BorderThickness="1">
                     </ListView>
-                    <Button x:Name="BtnAddDishMonday" Content="Tilføj" Margin="663,300,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:Name="BtnAddDishTuesdsay" Content="Tilføj" Margin="663,354,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:Name="BtnAddDishWednesday" Content="Tilføj" Margin="663,408,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:Name="BtnAddDishThursday" Content="Tilføj" Margin="663,462,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:Name="BtnAddDishFriday" Content="Tilføj" Margin="663,516,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Button x:Name="BtnAddDishMonday" Content="Tilføj" Margin="663,300,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnAddDishMonday_Click"/>
+                    <Button x:Name="BtnAddDishTuesdsay" Content="Tilføj" Margin="663,354,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnAddDishTuesdsay_Click"/>
+                    <Button x:Name="BtnAddDishWednesday" Content="Tilføj" Margin="663,408,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnAddDishWednesday_Click"/>
+                    <Button x:Name="BtnAddDishThursday" Content="Tilføj" Margin="663,462,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnAddDishThursday_Click"/>
+                    <Button x:Name="BtnAddDishFriday" Content="Tilføj" Margin="663,516,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnAddDishFriday_Click"/>
 
-                    <Button x:Name="BtnSavePlan" Content="Gem" Margin="570,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <ComboBox x:Name="CmbBoxWeekNumbers" HorizontalAlignment="Left" Margin="235,238,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="BtnSavePlan" Content="Gem" Margin="570,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnSavePlan_Click"/>
+                    <ComboBox x:Name="CmbBoxWeekNumbers" HorizontalAlignment="Left" Margin="235,238,0,0" VerticalAlignment="Top" SelectionChanged="CmbBoxWeekNumbers_SelectionChanged"/>
                     <TextBox x:Name="TBoxWeekNumber" HorizontalAlignment="Left" Margin="223,194,0,0" Text="Uge Nummer" VerticalAlignment="Top"/>
                 </Grid>
             </PivotItem>

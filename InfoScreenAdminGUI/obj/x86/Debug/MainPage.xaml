@@ -43,7 +43,7 @@
                     <Button x:ConnectionId='17' x:Name="BtnAddDishFriday" Content="Tilføj" Margin="663,516,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
                     <Button x:ConnectionId='18' x:Name="BtnSavePlan" Content="Gem" Margin="570,595,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <ComboBox x:ConnectionId='19' x:Name="CmbBoxWeekNumbers" HorizontalAlignment="Left" Margin="235,238,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:ConnectionId='19' x:Name="CmbBoxWeekNumbers" HorizontalAlignment="Left" Margin="235,238,0,0" VerticalAlignment="Top"                                                      />
                     <TextBox x:ConnectionId='20' x:Name="TBoxWeekNumber" HorizontalAlignment="Left" Margin="223,194,0,0" Text="Uge Nummer" VerticalAlignment="Top"/>
                 </Grid>
             </PivotItem>

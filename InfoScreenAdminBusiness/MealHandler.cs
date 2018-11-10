@@ -19,6 +19,11 @@ namespace InfoScreenAdminBusiness
         {
             return Model.Meals.Where(m => m.LunchPlanId == id).ToList();
         }
+        //public List<Meal> GetAllMeals()
+        //{
+        //    List<Meal> meals = Model.Meals(m => m.I;
+        //    return meal;
+        //}
         public bool AddMeal(Meal meal)
         {
             try

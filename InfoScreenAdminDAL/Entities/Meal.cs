@@ -38,5 +38,9 @@ namespace InfoScreenAdminDAL.Entities
             get { return lunchPlanId; }
             set { lunchPlanId = value; }
         }
+        public override string ToString()
+        {
+            return this.Description;
+        }
     }
 }
