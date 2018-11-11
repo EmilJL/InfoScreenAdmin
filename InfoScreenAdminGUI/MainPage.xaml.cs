@@ -36,7 +36,10 @@ namespace InfoScreenAdminGUI
         public MainPage()
         {
             this.InitializeComponent();
+            lunchPlanHandler = new LunchPlanHandler();
+            mealHandler = new MealHandler();
             dbHandler = new DBHandler();
+            messageHandler = new MessageHandler();
             model = dbHandler.Model;
             CmbBoxWeekNumbers.ItemsSource = Enumerable.Range(1, 51);
             CmbBoxWeekNumbers.SelectedIndex = GetIso8601WeekOfYear(DateTime.Now) - 1;
@@ -46,18 +49,35 @@ namespace InfoScreenAdminGUI
         {
             try
             {
-                lunchPlanHandler = new LunchPlanHandler();
-                LunchPlan lunchplan = lunchPlanHandler.GetLunchPlanForWeek(week);
-                if (lunchplan.Meals.Count > 0)
-                    TBoxMonday.Text = lunchplan.Meals[0].Description;
-                if (lunchplan.Meals.Count > 1)
-                    TBoxTuesday.Text = lunchplan.Meals[1].Description;
-                if (lunchplan.Meals.Count > 2)
-                    TBoxWednesday.Text = lunchplan.Meals[2].Description;
-                if (lunchplan.Meals.Count > 3)
-                    TBoxThursday.Text = lunchplan.Meals[3].Description;
-                if (lunchplan.Meals.Count > 4)
-                    TBoxFriday.Text = lunchplan.Meals[4].Description;
+                if (lunchPlanHandler.GetLunchPlanForWeek(week) != null)
+                {
+                    LunchPlan lunchplan = lunchPlanHandler.GetLunchPlanForWeek(week);
+                    if (lunchplan.Meals.Count > 0)
+                        TBoxMonday.Text = lunchplan.Meals[0].Description;
+                    if (lunchplan.Meals.Count > 1)
+                        TBoxTuesday.Text = lunchplan.Meals[1].Description;
+                    if (lunchplan.Meals.Count > 2)
+                        TBoxWednesday.Text = lunchplan.Meals[2].Description;
+                    if (lunchplan.Meals.Count > 3)
+                        TBoxThursday.Text = lunchplan.Meals[3].Description;
+                    if (lunchplan.Meals.Count > 4)
+                        TBoxFriday.Text = lunchplan.Meals[4].Description;
+                }
+                else
+                {
+                    TBoxMonday.Text = "";
+                    TBoxTuesday.Text = "";
+                    TBoxWednesday.Text = "";
+                    TBoxThursday.Text = "";
+                    if (week % 2 == 0)
+                    {
+                        TBoxFriday.Text = "Fri";
+                    }
+                    else
+                    {
+                        TBoxFriday.Text = "";
+                    }
+                }
             }
             catch (ArgumentNullException e)
             {
@@ -118,7 +138,13 @@ namespace InfoScreenAdminGUI
             TBoxThursday.Text = ListViewDatabaseDishes.SelectedItem.ToString();
         }
 
-        // ADD YEAR TO LUNCHPLAN? OR DELETE LUNCHPLANS EVERY YEAR
+        // MAKE THIS BE ON TEXT CHANGED EVENT - ALSO CHANGE TBOX
+        private void TestSearcher()
+        {
+            ListViewDatabaseDishes.ItemsSource = model.Meals.Where(m => m.Description.ToLower().Contains(TBoxFriday.Text.ToLower())).OrderByDescending(m => m.TimesChosen);
+        }
+
+        // ADD YEAR TO LUNCHPLAN? OR DELETE LUNCHPLANS EVERY YEAR - ALSO, MAYBE MAKE IT POSSIBLE TO NOT HAVE TO FILL OUT ENTIRE WEEK? ADD TEXTBLOCK FOR ERRORMESSAGE
         private void BtnSavePlan_Click(object sender, RoutedEventArgs e)
         {
             List<string> mealsOfWeek = new List<string>();
@@ -127,35 +153,48 @@ namespace InfoScreenAdminGUI
             mealsOfWeek.Add(TBoxWednesday.Text);
             mealsOfWeek.Add(TBoxThursday.Text);
             mealsOfWeek.Add(TBoxFriday.Text);
+            if (mealsOfWeek.Any(s => s == ""))
+            {
+                // ADD ERRORMESSAGE
+                return;
+            }
             LunchPlan lunchPlan = new LunchPlan();
             List<Meal> meals = new List<Meal>();
+            
             int currentWeekNumber = int.Parse(CmbBoxWeekNumbers.SelectedValue.ToString());
             if (model.LunchPlans.Any(l => l.Week == currentWeekNumber))
             {
+                foreach (var stringMeal in mealsOfWeek)
+                {
+                    model.Meals.Where(m => m.Description == stringMeal).FirstOrDefault().LunchPlanId = model.LunchPlans.Where(l => l.Week == currentWeekNumber).FirstOrDefault().Id;
+                    mealHandler.UpdateMeal(model.Meals.Where(m => m.Description == stringMeal).FirstOrDefault());
+                }
                 model.LunchPlans.Where(l => l.Week == currentWeekNumber).FirstOrDefault().Meals = meals;
             }
             else
             {
-
-            }
-            foreach (var meal in mealsOfWeek)
-            {
-                
-                else
+                lunchPlan.Week = currentWeekNumber;
+                lunchPlanHandler.AddLunchPlan(lunchPlan);
+                model.LunchPlans.Add(lunchPlanHandler.GetLunchPlanForWeek(currentWeekNumber));
+                foreach (var stringMeal in mealsOfWeek)
                 {
-
+                    model.Meals.Where(m => m.Description == stringMeal).FirstOrDefault().LunchPlanId = model.LunchPlans.Where(l => l.Week == currentWeekNumber).FirstOrDefault().Id;
+                    mealHandler.UpdateMeal(model.Meals.Where(m => m.Description == stringMeal).FirstOrDefault());
                 }
+                model.LunchPlans.Where(l => l.Week == currentWeekNumber).FirstOrDefault().Meals = meals;
             }
-            
-            
-            
-            foreach (var meal in mealsOfWeek)
-            {
-                if (true)
-                {
+        }
 
-                }
-            }
+        //PERHAPS ENABLE SETTING DATE AND HAVING MULTIPLE MESSAGES STORED?
+        private void BtnSaveMessage_Click(object sender, RoutedEventArgs e)
+        {
+            Message message = model.Messages.Last();
+            message.Text = TBoxMessage.Text;
+            message.Header = TBoxTitle.Text;
+            //INSERT CURRENT ADMIN
+            message.AdminId = 1;
+            message.Date = DateTime.Now;
+            messageHandler.UpdateMessage(message);
         }
     }
 }
