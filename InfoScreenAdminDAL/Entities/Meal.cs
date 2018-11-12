@@ -9,18 +9,15 @@ namespace InfoScreenAdminDAL.Entities
     public class Meal
     {
         public int Id { get; set; }
-        private int lunchPlanId;
         private int timesChosen;
-
         private string description;
         public Meal()
         {
 
         }
-        public Meal(string description, int lunchPlanId, int timesChosen = 0)
+        public Meal(string description, int timesChosen = 0)
         {
             Description = description;
-            LunchPlanId = lunchPlanId;
             TimesChosen = timesChosen;
         }
         public int TimesChosen
@@ -32,11 +29,6 @@ namespace InfoScreenAdminDAL.Entities
         {
             get { return description; }
             set { description = value; }
-        }
-        public int LunchPlanId
-        {
-            get { return lunchPlanId; }
-            set { lunchPlanId = value; }
         }
     }
 }

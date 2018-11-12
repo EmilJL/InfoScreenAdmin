@@ -16,16 +16,19 @@ namespace InfoScreenAdminDAL
             dbAccess = new DbAccess();
             Model model = dbAccess.GetDataAndCreateModel();
         }
-        public Model(ObservableCollection<Admin> admins, ObservableCollection<LunchPlan> lunchPlans, ObservableCollection<Message> messages, ObservableCollection<Meal> meals)
+        public Model(ObservableCollection<Admin> admins, ObservableCollection<LunchPlan> lunchPlans, ObservableCollection<Message> messages, ObservableCollection<Meal> meals, ObservableCollection<MealsVsLunchPlans> mealsVsLunchPlans)
         {
             Admins = admins;
             LunchPlans = lunchPlans;
             Messages = messages;
             Meals = meals;
+            MealsVsLunchPlans = mealsVsLunchPlans;
         }
-        public ObservableCollection<Meal> Meals { get; private set; }
-        public ObservableCollection<Admin> Admins { get; private set; }
-        public ObservableCollection<LunchPlan> LunchPlans { get; private set; }
-        public ObservableCollection<Message> Messages { get; private set; }
+        // PRIVATE SETTERS?
+        public ObservableCollection<Meal> Meals { get; set; }
+        public ObservableCollection<Admin> Admins { get; set; }
+        public ObservableCollection<LunchPlan> LunchPlans { get; set; }
+        public ObservableCollection<Message> Messages { get; set; }
+        public ObservableCollection<MealsVsLunchPlans> MealsVsLunchPlans { get; set; }
     }
 }

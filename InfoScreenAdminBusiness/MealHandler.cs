@@ -17,7 +17,15 @@ namespace InfoScreenAdminBusiness
         }
         public List<Meal> GetMealsForLunchPlan(int id)
         {
-            return Model.Meals.Where(m => m.LunchPlanId == id).ToList();
+            var mvls = Model.MealsVsLunchPlans.Where(mvl => mvl.LunchPlanId == id);
+            List<Meal> meals = new List<Meal>();
+            foreach (var mvl in mvls)
+            {
+                Meal meal = new Meal();
+                meal = Model.Meals.Where(m => m.Id == mvl.MealId).FirstOrDefault();
+                meals.Add(meal);
+            }
+            return meals;
         }
         public bool AddMeal(Meal meal)
         {
@@ -54,7 +62,6 @@ namespace InfoScreenAdminBusiness
                 DbAccess.UpdateMeal(meal);
                 var me = Model.Meals.Where(m => m.Id == meal.Id).FirstOrDefault();
                 me.Description = meal.Description;
-                me.LunchPlanId = meal.LunchPlanId;
                 me.TimesChosen = meal.TimesChosen;
                 return true;
             }

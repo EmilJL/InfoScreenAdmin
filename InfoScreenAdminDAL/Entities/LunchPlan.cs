@@ -10,25 +10,18 @@ namespace InfoScreenAdminDAL.Entities
     {
         public int Id { get; set; }
         private int week;
-        private List<Meal> meals;
         public LunchPlan()
         {
 
         }
-        public LunchPlan(int week, List<Meal> meals)
+        public LunchPlan(int week)
         {
             Week = week;
-            Meals = meals;
         }
         public int Week
         {
             get { return week; }
             set { week = value; }
-        }
-        public List<Meal> Meals
-        {
-            get { return meals; }
-            set { meals = value; }
         }
     }
 }
