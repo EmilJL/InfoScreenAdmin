@@ -43,6 +43,7 @@ namespace InfoScreenAdminGUI
             model = dbHandler.Model;
             CmbBoxWeekNumbers.ItemsSource = Enumerable.Range(1, 51);
             CmbBoxWeekNumbers.SelectedIndex = GetIso8601WeekOfYear(DateTime.Now) - 1;
+            ShowSelectedLunchPlan(GetIso8601WeekOfYear(DateTime.Now));
             ListViewDatabaseDishes.ItemsSource = model.Meals.OrderByDescending(m => m.TimesChosen);
         }
         public void ShowSelectedLunchPlan(int week)
@@ -135,7 +136,7 @@ namespace InfoScreenAdminGUI
 
         private void BtnAddDishFriday_Click(object sender, RoutedEventArgs e)
         {
-            TBoxThursday.Text = ListViewDatabaseDishes.SelectedItem.ToString();
+            TBoxFriday.Text = ListViewDatabaseDishes.SelectedItem.ToString();
         }
 
         // MAKE THIS BE ON TEXT CHANGED EVENT - ALSO CHANGE TBOX
@@ -144,7 +145,7 @@ namespace InfoScreenAdminGUI
             ListViewDatabaseDishes.ItemsSource = model.Meals.Where(m => m.Description.ToLower().Contains(TBoxFriday.Text.ToLower())).OrderByDescending(m => m.TimesChosen);
         }
 
-        // ADD YEAR TO LUNCHPLAN? OR DELETE LUNCHPLANS EVERY YEAR - ALSO, MAYBE MAKE IT POSSIBLE TO NOT HAVE TO FILL OUT ENTIRE WEEK? ADD TEXTBLOCK FOR ERRORMESSAGE
+        // ADD YEAR TO LUNCHPLAN? OR DELETE LUNCHPLANS EVERY YEAR - ALSO, MAYBE MAKE IT POSSIBLE TO NOT HAVE TO FILL OUT ENTIRE WEEK? ADD TEXTBLOCK FOR ERRORMESSAGE. MAKE IT POSSIBLE TO ADD MEALS TO SEVERAL DAYS OF WEEK?
         private void BtnSavePlan_Click(object sender, RoutedEventArgs e)
         {
             List<string> mealsOfWeek = new List<string>();
