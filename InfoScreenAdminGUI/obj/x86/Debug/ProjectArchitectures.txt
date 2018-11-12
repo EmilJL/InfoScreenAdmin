@@ -1,1 +1,1 @@
-C:\InfoScreenAdmin\InfoScreenAdminGUI\InfoScreenAdminGUI.csproj;x86
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\InfoScreenAdminGUI.csproj;x86
