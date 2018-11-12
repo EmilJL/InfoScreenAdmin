@@ -29,6 +29,11 @@ namespace InfoScreenAdminBusiness
                 return false;
             }
         }
+        public LunchPlan GetLunchPlanForWeek(int week)
+        {
+            LunchPlan lunchPlan = Model.LunchPlans.Where(l => l.Week == week).FirstOrDefault();
+            return lunchPlan;
+        }
         public bool DeleteLunchPlan(int id)
         {
             try

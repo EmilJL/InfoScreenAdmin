@@ -28,6 +28,12 @@
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminGUI.exe">
       <PackagePath>entrypoint\InfoScreenAdminGUI.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\emil5923\.nuget\packages\microsoft.aspnetcore.cryptography.internal\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.Internal.dll">
+      <PackagePath>Microsoft.AspNetCore.Cryptography.Internal.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\emil5923\.nuget\packages\microsoft.aspnetcore.cryptography.keyderivation\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll">
+      <PackagePath>Microsoft.AspNetCore.Cryptography.KeyDerivation.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.5\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
     </AppxPackagedFile>
@@ -519,6 +525,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.5\runtimes\win10-x86\lib\uap10.0.15138\netstandard.dll">
       <PackagePath>netstandard.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminBusiness\bin\x86\Debug\InfoScreenAdminBusiness.dll">
+      <PackagePath>InfoScreenAdminBusiness.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\bin\x86\Debug\InfoScreenAdminDAL.dll">
+      <PackagePath>InfoScreenAdminDAL.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>

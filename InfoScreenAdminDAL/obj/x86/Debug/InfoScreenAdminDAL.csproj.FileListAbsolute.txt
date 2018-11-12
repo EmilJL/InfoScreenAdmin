@@ -1,8 +1,7 @@
-C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\InfoScreenAdminDAL.csprojAssemblyReference.cache
-C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\InfoScreenAdminDAL.csproj.CoreCompileInputs.cache
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\bin\x86\Debug\InfoScreenAdminDAL.dll
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\bin\x86\Debug\InfoScreenAdminDAL.pdb
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\bin\x86\Debug\InfoScreenAdminDAL.pri
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\InfoScreenAdminDAL.csproj.CoreCompileInputs.cache
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\InfoScreenAdminDAL.dll
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\InfoScreenAdminDAL.pdb
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\priconfig.xml

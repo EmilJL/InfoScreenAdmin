@@ -1,1 +1,4 @@
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminBusiness\InfoScreenAdminBusiness.csproj;x86
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\InfoScreenAdminDAL.csproj;x86
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\InfoScreenAdminDAL.csproj;x86
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\InfoScreenAdminGUI.csproj;x86
