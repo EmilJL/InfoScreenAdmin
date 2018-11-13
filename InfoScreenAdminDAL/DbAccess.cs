@@ -70,7 +70,8 @@ namespace InfoScreenAdminDAL
                                 {
                                     var meal = new Meal();
                                     meal.Id = reader.GetInt32(0);
-                                    meal.TimesChosen = reader.GetInt32(1);
+                                    meal.Description = reader.GetString(1);
+                                    meal.TimesChosen = reader.GetInt32(2);
                                     meals.Add(meal);
                                 }
                             }
@@ -205,6 +206,43 @@ namespace InfoScreenAdminDAL
             {
                 Debug.WriteLine("Exception: " + eSql.Message);
             }
+        }
+        public List<LunchPlan> GetLunchPlansForWeek(int week)
+        {
+            List<LunchPlan> lunchPlansForWeek = new List<LunchPlan>();
+            string GetLunchPlanQuery = $"SELECT Id FROM LunchPlans WHERE Week = {week.ToString()}";
+            try
+            {
+                
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqlCommand cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = GetLunchPlanQuery;
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                               
+                                while (reader.Read())
+                                {
+                                    var lunchPlan = new LunchPlan();
+                                    lunchPlan.Id = reader.GetInt32(0);
+                                    lunchPlan.Week = week;
+                                    lunchPlansForWeek.Add(lunchPlan);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            catch (Exception eSql)
+            {
+                Debug.WriteLine("Exception: " + eSql.Message);
+            }
+            return lunchPlansForWeek;
         }
         public void DeleteLunchPlan(int lunchPlanId)
         {
@@ -390,6 +428,7 @@ namespace InfoScreenAdminDAL
                 Debug.WriteLine("Exception: " + eSql.Message);
             }
         }
+        
         public void AddMealsVsLunchPlans(MealsVsLunchPlans mealsVsLunchPlans)
         {
             string AddMealsVsLunchPlansQuery = $"INSERT into MealsVsLunchPlans (LunchPlanId, MealId, Weekday) VALUES (@LunchPlanId, @MealId, @Weekday)";

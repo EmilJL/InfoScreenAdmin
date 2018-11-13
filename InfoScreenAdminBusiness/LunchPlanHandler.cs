@@ -29,10 +29,10 @@ namespace InfoScreenAdminBusiness
                 return false;
             }
         }
-        public LunchPlan GetLunchPlanForWeek(int week)
+        public List<LunchPlan> GetLunchPlansForWeek(int week)
         {
-            LunchPlan lunchPlan = Model.LunchPlans.Where(l => l.Week == week).FirstOrDefault();
-            return lunchPlan;
+            List<LunchPlan> lunchPlans = DbAccess.GetLunchPlansForWeek(week);
+            return lunchPlans;
         }
         public bool DeleteLunchPlan(int id)
         {
@@ -55,6 +55,34 @@ namespace InfoScreenAdminBusiness
                 DbAccess.UpdateLunchPlan(lunchPlan);
                 var lp = Model.LunchPlans.Where(l => l.Id == lunchPlan.Id).FirstOrDefault();
                 lp.Week = lunchPlan.Week;
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return false;
+            }
+        }
+        public bool AddMealVsLunchPlan(MealsVsLunchPlans mealsVsLunchPlans)
+        {
+            try
+            {
+                DbAccess.AddMealsVsLunchPlans(mealsVsLunchPlans);
+                Model.MealsVsLunchPlans.Add(mealsVsLunchPlans);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return false;
+            }
+        }
+        public bool DeleteMealVsLunchPlan(int id)
+        {
+            try
+            {
+                DbAccess.DeleteMealsVsLunchPlan(id);
+                Model.MealsVsLunchPlans.Remove(Model.MealsVsLunchPlans.Where(mvsl => mvsl.Id == id).FirstOrDefault());
                 return true;
             }
             catch (Exception e)

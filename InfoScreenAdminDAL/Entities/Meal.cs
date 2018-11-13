@@ -30,5 +30,9 @@ namespace InfoScreenAdminDAL.Entities
             get { return description; }
             set { description = value; }
         }
+        public override string ToString()
+        {
+            return Description;
+        }
     }
 }

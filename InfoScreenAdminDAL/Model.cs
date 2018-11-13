@@ -15,6 +15,11 @@ namespace InfoScreenAdminDAL
         {
             dbAccess = new DbAccess();
             Model model = dbAccess.GetDataAndCreateModel();
+            Admins = model.Admins;
+            LunchPlans = model.LunchPlans;
+            Messages = model.Messages;
+            Meals = model.Meals;
+            MealsVsLunchPlans = model.MealsVsLunchPlans;
         }
         public Model(ObservableCollection<Admin> admins, ObservableCollection<LunchPlan> lunchPlans, ObservableCollection<Message> messages, ObservableCollection<Meal> meals, ObservableCollection<MealsVsLunchPlans> mealsVsLunchPlans)
         {

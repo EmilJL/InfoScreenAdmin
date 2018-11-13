@@ -15,3 +15,4 @@ C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\pri.r
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\qualifiers.txt
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\obj\x86\Debug\InfoScreenAdminDAL.csprojAssemblyReference.cache

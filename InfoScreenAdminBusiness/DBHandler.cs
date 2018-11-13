@@ -13,8 +13,8 @@ namespace InfoScreenAdminBusiness
         private Model model;
         public DBHandler()
         {
-            dbAccess = new DbAccess();
-            model = new Model();
+            DbAccess = new DbAccess();
+            Model = new Model();
         }
         public Model Model
         {

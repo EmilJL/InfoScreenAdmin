@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>047CE027CFDEDC8EB9A914A24AA4C94F5C650F84824C69899DD7AA7940D93C41</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>925BA016CB4C77D3233717CBF455C6F3D58B93A052E8857C19D47C9A8718ACDE</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c15ff0df-a21a-400c-b4b8-1ecd3197b568_1.0.0.0_x86__kqy766ejymwxr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c15ff0df-a21a-400c-b4b8-1ecd3197b568_kqy766ejymwxr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c15ff0df-a21a-400c-b4b8-1ecd3197b568</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-11-12T12:04:43.869</Modified>
+      <Modified>2018-11-13T10:54:03.250</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminGUI.exe">
       <PackagePath>entrypoint\InfoScreenAdminGUI.exe</PackagePath>
-      <Modified>2018-11-12T12:04:42.591</Modified>
+      <Modified>2018-11-13T10:54:02.044</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\.nuget\packages\microsoft.aspnetcore.cryptography.internal\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.Internal.dll">
       <PackagePath>Microsoft.AspNetCore.Cryptography.Internal.dll</PackagePath>
@@ -705,11 +705,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminBusiness\bin\x86\Debug\InfoScreenAdminBusiness.dll">
       <PackagePath>InfoScreenAdminBusiness.dll</PackagePath>
-      <Modified>2018-11-12T12:03:46.451</Modified>
+      <Modified>2018-11-13T10:05:55.647</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\bin\x86\Debug\InfoScreenAdminDAL.dll">
       <PackagePath>InfoScreenAdminDAL.dll</PackagePath>
-      <Modified>2018-11-12T12:03:45.218</Modified>
+      <Modified>2018-11-13T10:05:54.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -751,15 +751,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminGUI.xr.xml">
       <PackagePath>InfoScreenAdminGUI.xr.xml</PackagePath>
-      <Modified>2018-11-12T11:54:18.126</Modified>
+      <Modified>2018-11-13T08:48:46.094</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-11-12T12:04:42.359</Modified>
+      <Modified>2018-11-13T10:54:01.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-11-12T12:04:42.360</Modified>
+      <Modified>2018-11-13T10:54:01.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -768,11 +768,11 @@
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-11-12T12:03:54.906</Modified>
+      <Modified>2018-11-12T13:26:48.711</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\Core\InfoScreenAdminGUI.exe">
       <PackagePath>InfoScreenAdminGUI.exe</PackagePath>
-      <Modified>2018-11-12T12:04:43.862</Modified>
+      <Modified>2018-11-13T10:54:03.244</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

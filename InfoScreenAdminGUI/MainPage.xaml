@@ -53,7 +53,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Button x:Name="BtnCurrentFoodPlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" Content="Nuværende plan" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
-                            <ComboBox x:Name="CmbBoxWeekNumbers" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="CmbBoxWeekNumbers" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" SelectionChanged="CmbBoxWeekNumbers_SelectionChanged_1"/>
                             <TextBlock x:Name="TBlockWeekNumber"  Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0,0,0" Text="Uge nr. :" VerticalAlignment="Center"/>
 
                         </Grid>
@@ -89,15 +89,15 @@
                             <TextBox x:Name="TBoxFriday" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Ret her!" VerticalAlignment="Center" Height="45" Width="auto"/>
                             <TextBlock x:Name="TBlockFriday" Grid.Row="4" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Fredag" VerticalAlignment="Center" Height="45" Width="auto"/>
 
-                            <Button x:Name="BtnAddDishMonday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <Button x:Name="BtnAddDishTuesdsay" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <Button x:Name="BtnAddDishWednesday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <Button x:Name="BtnAddDishThursday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="3" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <Button x:Name="BtnAddDishFriday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="4" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Button x:Name="BtnAddDishMonday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnAddDishMonday_Click_1"/>
+                            <Button x:Name="BtnAddDishTuesdsay" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnAddDishTuesdsay_Click_1"/>
+                            <Button x:Name="BtnAddDishWednesday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnAddDishWednesday_Click_1"/>
+                            <Button x:Name="BtnAddDishThursday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="3" Grid.RowSpan="1" Content="Tilføj" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnAddDishThursday_Click_1"/>
+                            <Button x:Name="BtnAddDishFriday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="4" Grid.RowSpan="1" Content="Tilføj" Margin="1,6.2,-0.6,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="BtnAddDishFriday_Click_1"/>
                         </Grid>
 
-                        <Button x:Name="BtnSavePlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Gem" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                        
+                        <Button x:Name="BtnSavePlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Gem" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSavePlan_Click_1"/>
+
                     </Grid>
 
                     <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="1">
@@ -112,8 +112,8 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Button x:Name="BtnAddDishToDB" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" Content="Tilføj ret til Databasen" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
-                            <TextBox x:Name="TBoxSearchField" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0.6,0,0" Text="Søg på retter" VerticalAlignment="Center" Width="auto"/>
+                            <Button x:Name="BtnAddDishToDB" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" Content="Tilføj ret til Databasen" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" Click="BtnAddDishToDB_Click"/>
+                            <TextBox x:Name="TBoxSearchField" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0.6,0,0" Text="Søg på retter" VerticalAlignment="Center" Width="auto" TextChanged="TBoxSearchField_TextChanged" GotFocus="TBoxSearchField_GotFocus"/>
                         </Grid>
 
                         <ListView x:Name="ListViewDatabaseDishes" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Height="auto" BorderBrush="Black" BorderThickness="1">
@@ -121,19 +121,19 @@
 
                     </Grid>
 
-                        
-                    
 
-                    
 
-                    
+
+
+
+
                 </Grid>
             </PivotItem>
             <PivotItem Header="Fællesbesked">
                 <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
                     <TextBox x:Name="TBoxTitle" HorizontalAlignment="Left" Margin="41,54,0,0" Text="Titel her!" VerticalAlignment="Top" Height="45" Width="287"/>
                     <TextBox x:Name="TBoxMessage" HorizontalAlignment="Left" Margin="41,164,0,0" Text="Besked her!" VerticalAlignment="Top" Height="644" Width="1184"/>
-                    <Button x:Name="BtnSaveMessage" Content="Gem" HorizontalAlignment="Left" Margin="1129,845,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="BtnSaveMessage" Content="Gem" HorizontalAlignment="Left" Margin="1129,845,0,0" VerticalAlignment="Top" Click="BtnSaveMessage_Click_1"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Rediger Layout">
