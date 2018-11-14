@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-11-14T09:54:56.572</Modified>
+      <Modified>2018-11-14T10:57:33.825</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminGUI.exe">
       <PackagePath>entrypoint\InfoScreenAdminGUI.exe</PackagePath>
-      <Modified>2018-11-14T09:54:55.143</Modified>
+      <Modified>2018-11-14T10:57:33.225</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\.nuget\packages\microsoft.aspnetcore.cryptography.internal\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.Internal.dll">
       <PackagePath>Microsoft.AspNetCore.Cryptography.Internal.dll</PackagePath>
@@ -705,11 +705,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminBusiness\bin\x86\Debug\InfoScreenAdminBusiness.dll">
       <PackagePath>InfoScreenAdminBusiness.dll</PackagePath>
-      <Modified>2018-11-14T09:54:48.130</Modified>
+      <Modified>2018-11-14T10:57:27.983</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminDAL\bin\x86\Debug\InfoScreenAdminDAL.dll">
       <PackagePath>InfoScreenAdminDAL.dll</PackagePath>
-      <Modified>2018-11-14T09:54:26.910</Modified>
+      <Modified>2018-11-14T10:57:27.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -751,15 +751,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\InfoScreenAdminGUI.xr.xml">
       <PackagePath>InfoScreenAdminGUI.xr.xml</PackagePath>
-      <Modified>2018-11-14T09:54:27.035</Modified>
+      <Modified>2018-11-14T10:51:34.308</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-11-14T09:54:54.868</Modified>
+      <Modified>2018-11-14T10:57:32.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-11-14T09:54:54.869</Modified>
+      <Modified>2018-11-14T10:57:32.997</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -768,11 +768,11 @@
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-11-14T09:54:55.918</Modified>
+      <Modified>2018-11-14T10:51:37.555</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\emil5923\Desktop\InfoScreenAdmin\InfoScreenAdminGUI\bin\x86\Debug\Core\InfoScreenAdminGUI.exe">
       <PackagePath>InfoScreenAdminGUI.exe</PackagePath>
-      <Modified>2018-11-14T09:54:56.562</Modified>
+      <Modified>2018-11-14T10:57:33.817</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

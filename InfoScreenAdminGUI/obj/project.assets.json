@@ -3821,31 +3821,30 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "5BdAWDgMNwf90L0J+C/eh6kfHDa37ViL1cBL1nv5zPA4TB2cGV51YiQyvzCEy9DBE0LwwMI4+PkUpIekKyocSA==",
+      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
-        ".signature.p7s",
         "LICENSE.TXT",
+        "Microsoft.NETCore.Platforms.2.0.0.nupkg.sha512",
+        "Microsoft.NETCore.Platforms.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
-        "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.1.5": {
-      "sha512": "KYav5Tjs6Mn7GMsqnPXuGyOWagbmJ/LEtCcBNmhuj01/3+fm8BngClWMxNEW3YPMtwQkagxOK6zIkSs1wR+OeQ==",
+      "sha512": "+mkQ5wUTJSioGTIZ/q+0DTamp4MjTJjeuW1Jl5bZlVQdwR+IgCqGgU6et2JdeUoiwnDorEjJP7cH05SuiQ4edQ==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.1.5",
       "files": [
         ".signature.p7s",
         "LICENSE.TXT",
+        "Microsoft.NETCore.UniversalWindowsPlatform.6.1.5.nupkg.sha512",
+        "Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
-        "microsoft.netcore.universalwindowsplatform.6.1.5.nupkg.sha512",
-        "microsoft.netcore.universalwindowsplatform.nuspec",
         "ref/netcore50/_._",
         "ref/uap10.0.15138/Microsoft.CSharp.dll",
         "ref/uap10.0.15138/Microsoft.CSharp.xml",
@@ -4252,7 +4251,7 @@
       ]
     },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.1.5": {
-      "sha512": "EGaxh2FQ+QT/P45T+LILj6jY5wQVMix/MenOymQQO8/6mWNhVlkHrua6mvaaON4MwRbWRJPXNwPiJzLsKoUnEg==",
+      "sha512": "8dcKF8afW7ntMOrlx7mYIa9eEn1vX7mu8DyDRjFspieN9QRhSme88dLYW1ox4MRQXF/s67Vomnk4L6MQ2M389w==",
       "type": "package",
       "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.1.5",
       "files": [
@@ -4260,8 +4259,8 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.1.5.nupkg.sha512",
-        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.1.5.nupkg.sha512",
+        "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -5134,7 +5133,7 @@
       ]
     },
     "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.1.5": {
-      "sha512": "COdkVTC19mn8FKZio+INajHBk3Br/u4Z/wk9KloetL0nZ0i5izwlG7J9xzZprwZxycat8EQZaFfkm2ar3BF7Tw==",
+      "sha512": "hks9C32BJcxM94NO9J4ssE0AilhuJVPRQdA02UgP/mAL0y4dKApIzzJxzpRJ4yUk0JAWCIljToqy1Bn+G4O7tA==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.1.5",
       "files": [
@@ -5142,8 +5141,8 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.6.1.5.nupkg.sha512",
-        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform.6.1.5.nupkg.sha512",
+        "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -5311,7 +5310,7 @@
       ]
     },
     "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.1.5": {
-      "sha512": "I2IgT0mxvN5vMJpqFoQJOnjndL8nF4awpY5l6xpSfRwPLT3ACpGl4+DClV7PE3Dxk37W0yRub7Z3taxbyjdsMQ==",
+      "sha512": "W3RUaxJ/u8eUTr7Wwa0BnVBBGqFP0pALhmj5yjZogM2ChQkapZyTxO4+/FDDZYuI27OG5MhtMwoSCaVNG5Oobw==",
       "type": "package",
       "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.1.5",
       "files": [
@@ -5319,8 +5318,8 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.6.1.5.nupkg.sha512",
-        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.1.5.nupkg.sha512",
+        "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -6187,7 +6186,7 @@
       ]
     },
     "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.1.5": {
-      "sha512": "PmdqgMbiRRMlHP5PWjd/aLIC1MTsl/yu9xFiWPtyAVeRMcqutmCHOaSKJwOLiFsjtHiRWWJ6CkWLedAAw+xInQ==",
+      "sha512": "VWmLqgEnbpiwEnHjjlrNy9VLAdQy41K7htSXtKBqDqKNJbc0j0gaWGCrZjozAN9vA3m0q4BOpqqz7W+RHFXp0g==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.1.5",
       "files": [
@@ -6195,8 +6194,8 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.6.1.5.nupkg.sha512",
-        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform.6.1.5.nupkg.sha512",
+        "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -6364,7 +6363,7 @@
       ]
     },
     "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.1.5": {
-      "sha512": "FjEwLHVGkZoSSRKhOYlmOGmKcbABuZPjpPwRDGBqWX37wY4ns1IQBP8mPXTsEp5TM/DatL4dFDQG6aUHI15H2Q==",
+      "sha512": "9cnu98KUQiJWWkY/5+/+5xlR/OfeSNWo88v/rqy6ks0Nat02F1KaD4JzHatwlwtLI32Oi+2hUrdEPvUhUB6uOg==",
       "type": "package",
       "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.1.5",
       "files": [
@@ -6372,8 +6371,8 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.6.1.5.nupkg.sha512",
-        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.1.5.nupkg.sha512",
+        "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -7240,7 +7239,7 @@
       ]
     },
     "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.1.5": {
-      "sha512": "ui8vTycbSKccC8qoeqtGOz1UjAl1PAM6sL3KNntAb2PoX6FywiQL9I8JeQ/oYqaUwWFFKemL1Fz8W+Nut2aKIw==",
+      "sha512": "C3NiwXqzKJ4pams1sAW0EAZlDphBms1Ib1CUrg5NzDkpGpAp/NYYWzv8izwFRdhvvesb0KsFo6FW66l7coPgWg==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.1.5",
       "files": [
@@ -7248,8 +7247,8 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.1.5.nupkg.sha512",
-        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform.6.1.5.nupkg.sha512",
+        "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -7435,24 +7434,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dani479d\\.nuget\\packages\\": {},
+    "C:\\Users\\emil5923\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\InfoScreenAdmin\\InfoScreenAdminGUI\\InfoScreenAdminGUI.csproj",
+      "projectUniqueName": "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminGUI\\InfoScreenAdminGUI.csproj",
       "projectName": "InfoScreenAdminGUI",
-      "projectPath": "C:\\InfoScreenAdmin\\InfoScreenAdminGUI\\InfoScreenAdminGUI.csproj",
-      "packagesPath": "C:\\Users\\dani479d\\.nuget\\packages\\",
-      "outputPath": "C:\\InfoScreenAdmin\\InfoScreenAdminGUI\\obj\\",
+      "projectPath": "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminGUI\\InfoScreenAdminGUI.csproj",
+      "packagesPath": "C:\\Users\\emil5923\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminGUI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\dani479d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emil5923\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7465,11 +7464,11 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\InfoScreenAdmin\\InfoScreenAdminBusiness\\InfoScreenAdminBusiness.csproj": {
-              "projectPath": "C:\\InfoScreenAdmin\\InfoScreenAdminBusiness\\InfoScreenAdminBusiness.csproj"
+            "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminBusiness\\InfoScreenAdminBusiness.csproj": {
+              "projectPath": "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminBusiness\\InfoScreenAdminBusiness.csproj"
             },
-            "C:\\InfoScreenAdmin\\InfoScreenAdminDAL\\InfoScreenAdminDAL.csproj": {
-              "projectPath": "C:\\InfoScreenAdmin\\InfoScreenAdminDAL\\InfoScreenAdminDAL.csproj"
+            "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminDAL\\InfoScreenAdminDAL.csproj": {
+              "projectPath": "C:\\Users\\emil5923\\Desktop\\InfoScreenAdmin\\InfoScreenAdminDAL\\InfoScreenAdminDAL.csproj"
             }
           }
         }

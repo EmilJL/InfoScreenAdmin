@@ -337,7 +337,7 @@ namespace InfoScreenAdminDAL
         {
             string Id = message.Id.ToString();
             string adminId = message.AdminId.ToString();
-            string date = message.Date.ToLongDateString();
+            string date = message.Date.ToString();
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
