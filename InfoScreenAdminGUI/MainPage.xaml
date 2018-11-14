@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
         <Pivot Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="3" Title="Pivot" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <PivotItem Header="Madplan">
-                <Grid x:Name="PivotGrid1" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="1" Width="auto">
+                <Grid x:Name="PivotGrid1" HorizontalAlignment="Stretch" Margin="0,5,0,5" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="1" Width="auto">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -35,7 +35,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Grid x:Name="GridMealPlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" BorderBrush="Black" BorderThickness="1">
+                    <Grid x:Name="GridMealPlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" BorderBrush="Black" BorderThickness="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
@@ -96,14 +96,23 @@
                             <Button x:Name="BtnAddDishFriday" Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="4" Grid.RowSpan="1" Content="Tilføj" Margin="1,6.2,-0.6,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="BtnAddDishFriday_Click_1"/>
                         </Grid>
 
+<<<<<<< HEAD
                         <Button x:Name="BtnSavePlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Gem" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BtnSavePlan_Click_1"/>
 
+||||||| merged common ancestors
+                        <Button x:Name="BtnSavePlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Gem" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        
+=======
+                        <Button x:Name="BtnSavePlan" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="1" Content="Gem" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+>>>>>>> master
                     </Grid>
 
-                    <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="1">
+                    <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="0">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
 
                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
@@ -116,8 +125,10 @@
                             <TextBox x:Name="TBoxSearchField" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,0.6,0,0" Text="Søg på retter" VerticalAlignment="Center" Width="auto" TextChanged="TBoxSearchField_TextChanged" GotFocus="TBoxSearchField_GotFocus"/>
                         </Grid>
 
-                        <ListView x:Name="ListViewDatabaseDishes" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Height="auto" BorderBrush="Black" BorderThickness="1">
+                        <ListView x:Name="ListViewDatabaseDishes" FontSize="30" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Height="auto" BorderBrush="Black" BorderThickness="1">
                         </ListView>
+
+                        <Button x:Name="BtnDeleteDish" Grid.Row="2" Grid.RowSpan="1" Content="Slet ret" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
 
                     </Grid>
 
@@ -131,9 +142,36 @@
             </PivotItem>
             <PivotItem Header="Fællesbesked">
                 <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+<<<<<<< HEAD
                     <TextBox x:Name="TBoxTitle" HorizontalAlignment="Left" Margin="41,54,0,0" Text="Titel her!" VerticalAlignment="Top" Height="45" Width="287"/>
                     <TextBox x:Name="TBoxMessage" HorizontalAlignment="Left" Margin="41,164,0,0" Text="Besked her!" VerticalAlignment="Top" Height="644" Width="1184"/>
                     <Button x:Name="BtnSaveMessage" Content="Gem" HorizontalAlignment="Left" Margin="1129,845,0,0" VerticalAlignment="Top" Click="BtnSaveMessage_Click_1"/>
+||||||| merged common ancestors
+                    <TextBox x:Name="TBoxTitle" HorizontalAlignment="Left" Margin="41,54,0,0" Text="Titel her!" VerticalAlignment="Top" Height="45" Width="287"/>
+                    <TextBox x:Name="TBoxMessage" HorizontalAlignment="Left" Margin="41,164,0,0" Text="Besked her!" VerticalAlignment="Top" Height="644" Width="1184"/>
+                    <Button x:Name="BtnSaveMessage" Content="Gem" HorizontalAlignment="Left" Margin="1129,845,0,0" VerticalAlignment="Top"/>
+=======
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox x:Name="TBoxTitle" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="5,0,0,0" Text="Titel her!" VerticalAlignment="Center" Height="45" Width="287"/>
+                        <Button x:Name="BtnSaveMessage" Grid.Column="1" Grid.ColumnSpan="1" Content="Gem" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        <Button x:Name="BtnEditMessage" Grid.Column="2" Grid.ColumnSpan="1" Content="ret" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
+
+                    </Grid>
+
+
+                    <TextBox x:Name="TBoxMessage" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="5,5,0,0" Text="Besked her!" VerticalAlignment="Top" Height="auto" Width="auto" MinHeight="100" MinWidth="300" TextWrapping="Wrap"/>
+>>>>>>> master
                 </Grid>
             </PivotItem>
             <PivotItem Header="Rediger Layout">
@@ -141,16 +179,25 @@
             </PivotItem>
         </Pivot>
 
-        <Border Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="264" Margin="10,10,0,0" VerticalAlignment="Top" Width="426">
-            <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-                <TextBlock x:Name="TBlockCurrentUser" HorizontalAlignment="Left" Margin="41,54,0,0" Text="User: None" VerticalAlignment="Top" Height="45" Width="287"/>
-                <Button x:Name="BtnLogIn" Content="Log ind" HorizontalAlignment="Left" Margin="41,143,0,0" VerticalAlignment="Top"/>
-                <Button x:Name="BtnLogOut" Content="Log ud" HorizontalAlignment="Left" Margin="263,143,0,0" VerticalAlignment="Top"/>
-                <Button x:Name="BtnChangePassword" Content="Ændre kodeord" HorizontalAlignment="Left" Margin="44,211,0,0" VerticalAlignment="Top"/>
-                <Button x:Name="BtnEmpty" Content="Drop DB" HorizontalAlignment="Left" Margin="250,211,0,0" VerticalAlignment="Top"/>
-            </Grid>
+        <Grid Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,5,0,0" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="TBlockCurrentUser" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,0" Text="User: None" VerticalAlignment="Center" Height="auto" Width="auto"/>
+            <Button x:Name="BtnLogIn" Grid.Row="1" Content="Log ind" HorizontalAlignment="Right" Margin="0,5,5,0" VerticalAlignment="Top" MinWidth="125"/>
+            <Button x:Name="BtnLogOut" Grid.Column="1" Grid.Row="1" Content="Log ud" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" MinWidth="125"/>
+            <Button x:Name="BtnChangePassword" Grid.Row="1" Content="Ændre kodeord" HorizontalAlignment="Right" Margin="0,5,5,0" VerticalAlignment="Center" MinWidth="125"/>
+            <Button x:Name="BtnEmpty" Grid.Column="1" Grid.Row="1" Content="Drop DB" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Center" MinWidth="125"/>
+        </Grid>
 
-        </Border>
-        <ComboBox x:Name="CmbBoxActions" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" Margin="60,315,0,0" VerticalAlignment="Top" Height="43" Width="271"/>
+        <Grid Grid.Row="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" Margin="40,40,40,40" VerticalAlignment="Stretch">
+            <TextBlock x:Name="TBlockConsoleLog" TextWrapping="Wrap" Text="Message" Margin="5,5,5,5" Width="auto" Height="auto"/>
+
+        </Grid>
     </Grid>
 </Page>
